@@ -1,4 +1,4 @@
-# 04. Python FastMCP로 나만의 MCP 서버 만들기 실습
+# 실습: Python FastMCP로 나만의 MCP 서버 만들기
 
 공식 Python SDK는 FastAPI와 매우 유사한 직관적인 데코레이터 방식의 **`FastMCP`**를 제공합니다. 이번 실습에서는 도구(Tool), 리소스(Resource), 프롬프트(Prompt)를 모두 포함하는 나만의 서버를 직접 작성해 봅니다.
 
@@ -9,14 +9,14 @@
 Python 가상환경을 생성하거나 `uv`를 사용해 필요한 패키지를 설치합니다.
 
 ```bash
-cd /home/ysik/workspace/study/MCP
+cd /home/ysik/workspace/study/MCP/examples/python-fastmcp
 
 # 가상환경 생성 및 활성화
 python3 -m venv .venv
 source .venv/bin/activate
 
-# MCP 공식 SDK 설치
-pip install "mcp[cli]"
+# 의존성 패키지 설치
+pip install -r requirements.txt
 ```
 
 > **참고**: `uv`를 사용한다면 `uv init` 후 `uv add "mcp[cli]"`로 더 빠르게 설정할 수 있습니다.
@@ -143,7 +143,7 @@ if __name__ == "__main__":
 
 ```bash
 # MCP Inspector 실행 명령어
-npx @modelcontextprotocol/inspector python3 /home/ysik/workspace/study/MCP/server.py
+npx @modelcontextprotocol/inspector python3 /home/ysik/workspace/study/MCP/examples/python-fastmcp/server.py
 ```
 
 또는 Python mcp CLI가 설치되어 있다면:

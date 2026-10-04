@@ -19,9 +19,9 @@ Claude Desktop은 MCP의 대표적인 공식 Host입니다. 설정 파일에 서
 {
   "mcpServers": {
     "my-study-server": {
-      "command": "/home/ysik/workspace/study/MCP/.venv/bin/python3",
+      "command": "/home/ysik/workspace/study/MCP/examples/python-fastmcp/.venv/bin/python3",
       "args": [
-        "/home/ysik/workspace/study/MCP/server.py"
+        "/home/ysik/workspace/study/MCP/examples/python-fastmcp/server.py"
       ],
       "env": {
         "PYTHONUNBUFFERED": "1"
@@ -43,7 +43,7 @@ Cursor IDE(0.45 버전 이상)에서도 MCP를 지원합니다:
 2. **새 서버 추가 (`+ Add New MCP Server`)**:
    - **Name**: `my-study-server`
    - **Type**: `command` (stdio 방식)
-   - **Command**: `/home/ysik/workspace/study/MCP/.venv/bin/python3 /home/ysik/workspace/study/MCP/server.py`
+   - **Command**: `/home/ysik/workspace/study/MCP/examples/python-fastmcp/.venv/bin/python3 /home/ysik/workspace/study/MCP/examples/python-fastmcp/server.py`
 3. 또는 프로젝트 루트의 `.cursor/mcp.json`에 직접 정의할 수도 있습니다.
 
 ---
