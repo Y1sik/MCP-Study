@@ -9,10 +9,15 @@ MCP 학습용 샘플 서버 (FastMCP 활용)
 """
 
 from datetime import datetime
-from mcp.server.fastmcp import FastMCP
+
+# MCP 2.x 및 1.x 호환성 임포트
+try:
+    from mcp.server import MCPServer
+except ImportError:
+    from mcp.server.fastmcp import FastMCP as MCPServer
 
 # 1. 서버 인스턴스 초기화
-mcp = FastMCP(
+mcp = MCPServer(
     "My Study MCP Server",
     dependencies=["mcp"],
 )
